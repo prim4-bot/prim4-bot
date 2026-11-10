@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>satu kata — undangan pernikahan digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EDF1EA;--surface:#FAFBF8;--ink:#16281F;--muted:#44574C;--accent:#8E2F57;--accent-ink:#fff;--line:#C9D3C6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101A15;--surface:#18271F;--ink:#EAF0E8;--muted:#AFC0B4;--accent:#E58DB0;--accent-ink:#1A0A12;--line:#2E4237;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#101A15;--surface:#18271F;--ink:#EAF0E8;--muted:#AFC0B4;--accent:#E58DB0;--accent-ink:#1A0A12;--line:#2E4237;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 18px/1.6 Figtree,system-ui,sans-serif}
+h1,h2,h3,.serif{font-family:Fraunces,Georgia,serif;font-weight:400;line-height:1.1;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.logo{font:600 24px Fraunces,Georgia,serif;text-decoration:none;color:var(--ink)}
+nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-weight:500}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border-radius:999px;border:2px solid var(--accent);background:var(--accent);color:var(--accent-ink);font:600 18px Figtree,sans-serif;cursor:pointer;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.hero{padding:56px 0 72px;text-align:center}
+.hero h1{font-size:clamp(34px,6vw,64px);max-width:15ch;margin:0 auto 28px}
+.rot{font:italic 400 clamp(72px,17vw,190px)/1 Fraunces,Georgia,serif;color:var(--accent);min-height:1.1em;margin:8px 0 28px;transition:opacity .5s}
+.rot.out{opacity:0}
+.cta{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.sub{color:var(--muted);margin-top:16px}
+section{padding:56px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(28px,4vw,42px);margin-bottom:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px}
+#quiz{scroll-margin-top:12px}
+.prog{height:8px;background:var(--line);border-radius:8px;overflow:hidden;margin:16px 0 8px}
+.prog i{display:block;height:100%;background:var(--accent);width:0;transition:width .3s}
+.q{font-size:clamp(24px,3.5vw,34px);margin:20px 0}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.opt{min-height:84px;text-align:left;padding:16px 18px;border-radius:16px;border:2px solid var(--line);background:var(--bg);color:var(--ink);font:500 18px Figtree,sans-serif;cursor:pointer;display:flex;align-items:center;gap:14px}
+.opt:hover{border-color:var(--accent)}
+.opt .em{font-size:30px}
+.back{background:none;border:0;color:var(--muted);font:500 18px Figtree,sans-serif;min-height:48px;cursor:pointer;margin-top:16px;padding:0}
+.res{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+@media(max-width:760px){.res{grid-template-columns:1fr}nav a{display:none}}
+.bigword{font:italic 400 clamp(64px,13vw,128px)/1 Fraunces,Georgia,serif;color:var(--accent);margin:6px 0 12px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.tags span{border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:16px;color:var(--muted)}
+label{display:block;font-weight:600;margin:18px 0 6px}
+input[type=text]{width:100%;min-height:54px;font:400 18px Figtree,sans-serif;padding:0 16px;border-radius:14px;border:2px solid var(--line);background:var(--bg);color:var(--ink)}
+.acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.phone{width:260px;margin:0 auto;border:8px solid #1b1b1b;border-radius:38px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.18)}
+.scr{aspect-ratio:9/17;padding:34px 22px;text-align:center;display:flex;flex-direction:column;justify-content:center;gap:10px;transition:background .4s,color .4s;font-size:14px;line-height:1.4}
+.scr .k{font-size:13px;opacity:.8}
+.scr .nm{font:400 30px/1.1 Fraunces,Georgia,serif}
+.scr .wd{font:italic 400 52px/1 Fraunces,Georgia,serif;margin:6px 0}
+.scr .pill{align-self:center;border-radius:999px;padding:8px 18px;font-weight:600;font-size:13px;margin-top:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:24px}
+.th{border-radius:18px;padding:22px;min-height:150px;display:flex;flex-direction:column;justify-content:flex-end}
+.th b{font:italic 400 40px/1 Fraunces,Georgia,serif}
+.th small{font-size:16px;opacity:.9}
+footer{padding:36px 0 100px;color:var(--muted);border-top:1px solid var(--line)}
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:5;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+[hidden]{display:none!important}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a class="logo" href="#">satu kata</a><nav><a href="#quiz">Kuis</a><a href="#desain">Desain</a><a href="#bantuan">Bantuan</a></nav></header>
+
+<div class="hero">
+<h1>Kalau pernikahanmu cukup satu kata, apa katanya?</h1>
+<div class="rot serif" id="rot" aria-hidden="true">Teduh</div>
+<div class="cta">
+<a class="btn" href="#quiz" id="start">Cari Satu Kata-mu</a>
+<a class="btn ghost" href="#desain">Lihat Semua Desain</a>
+</div>
+<p class="sub">6 pertanyaan, sekitar 1 menit. Tanpa daftar.</p>
+</div>
+
+<section id="quiz">
+<h2>Cari Satu Kata-mu</h2>
+<div class="card" id="box"></div>
+</section>
+
+<section id="desain">
+<h2>Semua desain</h2>
+<p style="color:var(--muted);max-width:56ch">Setiap desain punya satu kata sebagai nama, lengkap dengan gaya dan warnanya. Pilih yang paling terasa seperti kalian.</p>
+<div class="grid" id="cat"></div>
+</section>
+
+<footer id="bantuan">Bingung memilih? Tombol WhatsApp di pojok kanan bawah siap membantu. Ini prototipe: nomor, harga, dan desain masih contoh.</footer>
+</div>
+<a class="btn wa" href="https://wa.me/6281234567890?text=Halo%20satu%20kata%2C%20saya%20mau%20tanya%20undangan" target="_blank" rel="noopener">Bingung? Chat kami</a>
+
+<script>
+const W={
+teduh:{n:"Teduh",m:"Tempat dua orang beristirahat dan merasa aman.",s:"Minimalis",c:["#DCE6D5","#1F3A2E","#4F7A5E"],mu:"Gitar akustik",e:"Hijau sage, tenang"},
+restu:{n:"Restu",m:"Doa dan izin dari keluarga yang menyertai langkah kalian.",s:"Adat",c:["#5A2E1E","#F6E3C8","#E0A458"],mu:"Gamelan lembut",e:"Cokelat hangat, nuansa adat"},
+pulang:{n:"Pulang",m:"Menemukan seseorang yang terasa seperti rumah.",s:"Romantis",c:["#F4DCDD","#5B2A3A","#B4506E"],mu:"Piano pelan",e:"Dusty pink, hangat"},
+megah:{n:"Megah",m:"Hari besar yang dirayakan sepenuh hati.",s:"Mewah",c:["#14213D","#F5E6BF","#D4AF37"],mu:"Orkestra klasik",e:"Navy dan emas, formal"},
+lantang:{n:"Lantang",m:"Berani menyatakan cinta dengan gaya sendiri.",s:"Modern",c:["#111111","#FFFFFF","#FF5A36"],mu:"Pop modern",e:"Hitam putih, tegas"},
+riang:{n:"Riang",m:"Pernikahan yang penuh tawa dan warna.",s:"Ceria",c:["#E6DDF7","#3B2A66","#F28C6B"],mu:"Pop romantis ceria",e:"Pastel, segar"}};
+const Q=[
+{q:"Suasana hari H seperti apa yang kalian bayangkan?",o:[["🌿","Taman terbuka",{teduh:2,riang:1}],["✨","Ballroom megah",{megah:2}],["🏠","Rumah keluarga",{pulang:2,restu:1}],["🏛️","Gedung adat",{restu:2}]]},
+{q:"Hubungan kalian paling mirip apa?",o:[["🤝","Sahabat yang jadi cinta",{pulang:2}],["🧭","Petualangan bersama",{lantang:2}],["🍵","Tenang dan stabil",{teduh:2}],["😄","Penuh tawa",{riang:2}]]},
+{q:"Seberapa kental adat di acara kalian?",o:[["🪔","Sangat kental",{restu:2}],["🌾","Sedikit sentuhan",{pulang:1,teduh:1}],["🏙️","Modern",{lantang:2,megah:1}],["🔗","Perpaduan dua budaya",{restu:1,pulang:1,riang:1}]]},
+{q:"Apa yang sebaiknya dirasakan tamu saat membuka undangan?",o:[["🤗","Hangat",{pulang:2}],["🥹","Haru",{restu:2}],["🤩","Kagum",{megah:2}],["🎉","Semangat",{lantang:1,riang:2}]]},
+{q:"Palet warna yang paling “kalian”?",o:[["🟢","Hijau sage",{teduh:2}],["🟤","Cokelat hangat",{restu:2}],["🌸","Dusty pink",{pulang:2}],["🔵","Navy dan emas",{megah:2}],["⚫","Hitam putih",{lantang:2}],["🟣","Pastel",{riang:2}]]},
+{q:"Musik pembuka yang cocok?",o:[["🎸","Akustik",{teduh:1,pulang:1}],["🎹","Piano klasik",{megah:1,pulang:1}],["🥁","Gamelan atau tradisional",{restu:2}],["🎤","Pop romantis",{riang:1,lantang:1}]]}];
+const box=document.getElementById("box");let i=0,sc={},hist=[],names="";
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function ask(){const q=Q[i];
+box.innerHTML=`<div>Pertanyaan ${i+1} dari ${Q.length}</div><div class="prog" role="progressbar" aria-valuemin="1" aria-valuemax="${Q.length}" aria-valuenow="${i+1}"><i style="width:${(i+1)/Q.length*100}%"></i></div><h3 class="q">${q.q}</h3><div class="opts">${q.o.map((o,k)=>`<button class="opt" data-k="${k}"><span class="em" aria-hidden="true">${o[0]}</span>${o[1]}</button>`).join("")}</div>${i?'<button class="back" id="bk">← Kembali</button>':""}`;
+box.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{const p=q.o[b.dataset.k][2];hist.push(p);for(const k in p)sc[k]=(sc[k]||0)+p[k];i++;i<Q.length?ask():done()});
+const bk=document.getElementById("bk");if(bk)bk.onclick=()=>{const p=hist.pop();for(const k in p)sc[k]-=p[k];i--;ask()}}
+function rank(){return Object.keys(W).sort((a,b)=>(sc[b]||0)-(sc[a]||0))}
+function done(){show(rank()[0])}
+function show(key){const w=W[key],alt=rank().filter(k=>k!==key).slice(0,2);
+box.innerHTML=`<div class="res"><div><div>Kami adalah</div><div class="bigword">${w.n}</div><p style="font-size:20px;margin:0">${w.m}</p>
+<div class="tags"><span>${w.s}</span><span>${w.e}</span><span>Musik: ${w.mu}</span></div>
+<label for="nm">Ketik nama kalian, lihat undangannya berubah</label><input type="text" id="nm" placeholder="Contoh: Sari &amp; Budi" value="${esc(names)}" maxlength="30" autocomplete="off">
+<div class="acts"><a class="btn" id="use" target="_blank" rel="noopener">Pakai desain ini</a><button class="btn ghost" id="sh">Bagikan hasilku</button></div>
+<p class="sub" id="msg" role="status"></p>
+<p style="margin:18px 0 6px;color:var(--muted)">Belum cocok? Coba kata lain:</p>
+<div class="acts" style="margin-top:0">${alt.map(a=>`<button class="btn ghost alt" data-k="${a}">${W[a].n}</button>`).join("")}<button class="btn ghost" id="re">Ulangi kuis</button></div></div>
+<div><div class="phone"><div class="scr" id="scr" style="background:${w.c[0]};color:${w.c[1]}"><div class="k">Undangan Pernikahan</div><div class="nm" id="pn">${esc(names)||"Nama &amp; Nama"}</div><div class="wd" style="color:${w.c[2]}">${w.n}</div><div class="k">Sabtu, 12 Desember 2026<br>Pukul 10.00 WIB</div><div class="pill" style="background:${w.c[2]};color:${w.c[0]}">Konfirmasi Kehadiran</div></div></div></div></div>`;
+const nm=document.getElementById("nm"),pn=document.getElementById("pn");
+const up=()=>{names=nm.value;pn.textContent=names.trim()||"Nama & Nama";document.getElementById("use").href="https://wa.me/6281234567890?text="+encodeURIComponent(`Halo satu kata, saya mau pakai desain ${w.n}${names.trim()?" untuk "+names.trim():""}.`)};
+nm.oninput=up;up();
+box.querySelectorAll(".alt").forEach(b=>b.onclick=()=>show(b.dataset.k));
+document.getElementById("re").onclick=()=>{i=0;sc={};hist=[];ask()};
+document.getElementById("sh").onclick=async()=>{const t=`${names.trim()||"Kami"} adalah “${w.n}”. ${w.m} Cari satu kata-mu di satu kata.`,m=document.getElementById("msg");
+try{if(navigator.share){await navigator.share({text:t})}else{await navigator.clipboard.writeText(t);m.textContent="Teks hasil sudah disalin."}}catch(e){m.textContent="Belum bisa dibagikan. Coba salin manual."}};}
+document.getElementById("cat").innerHTML=Object.values(W).map(w=>`<div class="th" style="background:${w.c[0]};color:${w.c[1]}"><b style="color:${w.c[2]}">${w.n}</b><small>${w.s} · ${w.e}</small></div>`).join("");
+ask();
+const rot=document.getElementById("rot"),ws=Object.values(W).map(w=>w.n);let r=0;
+if(!matchMedia("(prefers-reduced-motion:reduce)").matches)setInterval(()=>{rot.classList.add("out");setTimeout(()=>{r=(r+1)%ws.length;rot.textContent=ws[r];rot.classList.remove("out")},500)},2600);
+</script>
+</body>
+</html>
